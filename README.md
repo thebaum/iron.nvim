@@ -4,7 +4,7 @@ Interactive Repls Over Neovim
 
 ## Lua porting build status
 
-[![CircleCI](https://circleci.com/gh/hkupty/iron.nvim.svg?style=shield&circle-token=debdaf36972c979be9ab014b325aa91da3ca0c1c)]()
+[![CircleCI](https://circleci.com/gh/BurningEther/iron.nvim.svg?style=svg)](https://circleci.com/gh/BurningEther/iron.nvim)
 
 ## Lua roadmap
 
