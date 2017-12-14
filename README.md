@@ -10,7 +10,7 @@ Interactive Repls Over Neovim
 
 - [x] Creating REPLs with lua
 - [x] Sending data to REPLs
-- [ ] Mappings and custom mappings
+- [x] Mappings and custom mappings
 - [ ] User-defined REPL configuration
 - [ ] FT-specific hooks
 - [ ] Autocommands
