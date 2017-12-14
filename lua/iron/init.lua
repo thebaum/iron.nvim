@@ -99,7 +99,7 @@ end
 
 --[[ -> repl for
 -- opens a repl for given `ft`
--- Below is a code example, opening a new lua repl: 
+-- Below is a code example, opening a new lua repl:
 --| iron._.repl_for('lua')
 --]]
 api.repl_for = function(ft)
@@ -107,7 +107,24 @@ api.repl_for = function(ft)
 end
 
 api.send_to = function(ft, data)
-  iron.core.send_to_repl(iron.config, iron.memory, ft, data)
+  iron.core.send_to_repl(iron.config, iron.memory, ft, dt)
+end
+
+api.motion = function(tp)
+  local bufnr = nvim.nvim_call_function('bufnr', {'%'})
+  local ft = nvim.nvim_buf_get_option(bufnr, 'filetype')
+  local b, e
+  if tp == 'visual' then
+    b, e = '<', '>'
+  else
+    b, e = '[', ']'
+  end
+  iron.core.send_to_repl(iron.config, iron.memory, ft, nvim.nvim_buf_get_lines(
+        bufnr,
+        nvim.nvim_buf_get_mark(bufnr, b)[1] - 1,
+        nvim.nvim_buf_get_mark(bufnr, e)[1],
+        0
+    ))
 end
 
 return iron

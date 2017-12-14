@@ -1,5 +1,11 @@
 local functional = {}
 
+functional.peek = function(tbl)
+  local _, v = next(tbl)
+  return v
+end
+
+
 functional.clone = function(curr)
   local new = {}
   for k, v in pairs(curr) do
