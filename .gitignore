@@ -2,3 +2,5 @@
 __pycache__/
 Makefile
 doc/tags
+luacov*
+scratch.lua
